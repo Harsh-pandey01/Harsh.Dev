@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss" ;
+@custom-variant dark (&:where(.dark, .dark *));
+:root{
+    --bg-primary : white ;
+    --bg-secondry : rgba(241, 238, 238, 0.132)  ;
+    --text-text : black ;
+    --text-secondry : var(--color-neutral-700) ;
+    --color-border : var(--color-neutral-200) ;
+    --color-highlight : var(--color-neutral-50);
+}
+
+.dark {
+    --bg-primary : black ;
+    --bg-secondry : #17171794 ;
+    --text-text : var(--color-neutral-100) ;
+    --text-secondry : var(--color-neutral-500) ;
+    --color-border : var(--color-neutral-700) ;
+    --color-highlight : rgba(108, 108, 108, 0.167);
+}
+
+@theme inline{
+    --color-primary : var(--bg-primary) ;
+    --color-text : var(--text-text) ;
+    --color-textSec : var(--text-secondry) ;
+    --color-border : var(--color-border) ;
+    --color-highlight : var(--color-highlight);
+    --color-secondry : var(--bg-secondry);
+}
+
+@theme {
+    --color-bluish : var(--color-slate-900);
+   --font-main: "Hanken Grotesk", sans-serif;
+   --font-sec : "Roboto" , sans-serif ;
+   --font-inter : "Inter" , sans-serif ;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield; /* Standard property for compatibility */
+}
