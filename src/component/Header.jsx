@@ -2,12 +2,11 @@ import { GoMoon } from "react-icons/go";
 import { IoSunnyOutline } from "react-icons/io5";
 import { useTheme } from "../context/ThemeContext";
 import gsap from "gsap";
+import { motion, scale } from "motion/react";
+import { Link } from "react-router";
 
-import { useRef } from "react";
-
-function Header() {
+function Header({ themeToggleRef }) {
   const { theme, setTheme } = useTheme();
-  const themeToggleRef = useRef(null);
 
   const handleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -33,7 +32,7 @@ function Header() {
     });
 
     circleTimeLine.to(themeToggleRef.current, {
-      scale: 100,
+      scale: 150,
       duration: 1.2,
       ease: "power2.inOut",
     });
@@ -41,18 +40,26 @@ function Header() {
 
   return (
     <>
-      <div className=" w-full z-99 bg-primary/70 fixed px-3 left-0 top-0 min-h-15 py-5  backdrop-blur-md overflow-hidden">
+      <div className=" w-full z-99  bg-primary/70 fixed px-3 left-0 top-0 min-h-15 py-5  backdrop-blur-md overflow-hidden">
         {/* Logo */}
         <div className="max-w-3xl mx-auto flex items-end justify-between">
-          <div className="h-10 rounded-md overflow-clip">
-            <img className="h-full" src="logo.png" alt="logo-image" />
-          </div>
+          <motion.div
+            whileHover={{
+              scale: 0.85,
+            }}
+            className="h-10 rounded-md overflow-clip"
+          >
+            <Link to={"/"}>
+              <img className="h-full" src="logo.png" alt="logo-image" />
+            </Link>
+          </motion.div>
 
           {/* Nav + Theme Toggle */}
           <div className="flex items-center gap-5">
             <div className="flex items-center font-normal font-robo gap-5">
-              <p className="relative cursor-pointer">About</p>
-              <p className="cursor-pointer">Projects</p>
+              <Link to={"/projects"} className="cursor-pointer">
+                Projects
+              </Link>
             </div>
 
             <div className="relative border border-border border-dashed rounded-md shadow-inner px-2 py-2 flex items-center justify-center">
@@ -67,13 +74,6 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div
-        ref={themeToggleRef}
-        className=" h-10 w-10 z-100 absolute  rounded-full left-full top-0 bg-[black] dark:bg-[white]  border-border"
-      >
-        cacas
       </div>
     </>
   );
