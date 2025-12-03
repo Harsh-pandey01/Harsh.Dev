@@ -78,10 +78,19 @@ function Hero() {
       </h1>
 
       <div className="mt-10 flex items-center gap-10">
-        <button className="border flex items-center gap-2 group bg-highlight border-border px-4 cursor-pointer py-1.5 rounded-md shadow-inner">
-          <IoDocumentTextOutline className="rotate-12 group-hover:rotate-0 transition-all ease-in-out duration-100 " />{" "}
+        <button
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1RBFqthJlCPCJrD6kNm6TJTOjAN-uUqJ4/preview",
+              "_blank"
+            )
+          }
+          className="border flex items-center gap-2 group bg-highlight border-border px-4 cursor-pointer py-1.5 rounded-md shadow-inner"
+        >
+          <IoDocumentTextOutline className="rotate-12 group-hover:rotate-0 transition-all ease-in-out duration-100" />
           Resume / CV
         </button>
+
         <Socials />
       </div>
 
