@@ -54,7 +54,8 @@ function Hero() {
       <h1 className="text-textSec tracking-normal leading-10 text-xl ">
         I build interactive web apps using{" "}
         <span className="px-2 py-1 rounded-md bg-highlight border border-border border-dashed text-text shadow-inner">
-          <img className="h-5 inline" src="tailwind.svg" alt="" /> Tailwind CSS
+          <img className="h-5 inline-block" src="tailwind.svg" alt="" />{" "}
+          Tailwind CSS
         </span>{" "}
         ,{" "}
         <span className="px-2  py-1 rounded-md bg-highlight border border-border border-dashed text-text shadow-inner">
@@ -62,7 +63,7 @@ function Hero() {
         </span>{" "}
         ,{" "}
         <span className="px-2 py-1 rounded-md bg-highlight border border-border border-dashed shadow-inner text-text">
-          <img className="h-5 inline" src="redux.svg" alt="" /> Redux
+          <img className="h-5 inline-block" src="redux.svg" alt="" /> Redux
         </span>{" "}
         ,{" "}
         <span className="px-2 py-1 rounded-md bg-highlight border border-border shadow-inner border-dashed text-text">

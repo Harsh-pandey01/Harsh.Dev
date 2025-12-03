@@ -37,29 +37,31 @@ function ProjectCard({ data }) {
             className="flex items-center gap-4"
           >
             {/* GitHub */}
-            <div
-              onMouseEnter={() => setHovered("github")}
-              onMouseLeave={() => setHovered("")}
-              className="relative  flex flex-col items-center cursor-pointer"
-            >
-              {/* Animated floating label */}
-              {hovered === "github" && (
-                <motion.span
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: -10 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.22, ease: "easeOut" }}
-                  className="absolute z-5 -top-6 rounded-md font-medium
+            {data.github && (
+              <div
+                onMouseEnter={() => setHovered("github")}
+                onMouseLeave={() => setHovered("")}
+                className="relative  flex flex-col items-center cursor-pointer"
+              >
+                {/* Animated floating label */}
+                {hovered === "github" && (
+                  <motion.span
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: -10 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.22, ease: "easeOut" }}
+                    className="absolute z-5 -top-6 rounded-md font-medium
                       bg-primary border border-border shadow-2xl  text-xs text-text px-2 py-1
                         select-none pointer-events-none"
-                >
-                  Github
-                </motion.span>
-              )}
-              <Link to={data.github} target="_b">
-                <FaGithub className="text-2xl text-textSec hover:text-text transition-colors duration-150" />
-              </Link>
-            </div>
+                  >
+                    Github
+                  </motion.span>
+                )}
+                <Link to={data.github} target="_b">
+                  <FaGithub className="text-2xl text-textSec hover:text-text transition-colors duration-150" />
+                </Link>
+              </div>
+            )}
 
             {/* Live Link */}
             <div

@@ -19,37 +19,20 @@ const projectsData = [
   {
     id: 2,
     title: "Codex",
-    github: "",
-    liveLink: "",
+
+    liveLink: "https://codexeditor.netlify.app/",
     description: `
 This project is an online coding platform powered by the Monaco Code Editor, allowing users to write, compile, and run code directly in the browser with support for C++, JavaScript, Java, and Python. The core objective is to offer a lightweight, fast, and highly customizable online coding environment that works for anyone — from casual coders to serious learners.
 
 The platform provides two user modes:
 
-1. Quick Access (Without Login)
 Users can instantly start coding without creating an account. Features include:
-• Select programming language (C++ / JS / Java / Python)
-• Run and test code directly in the editor
-• Customizable editor themes and font sizes
-• Input/output console
+ Select programming language (C++ / JS / Java / Python)
+ Run and test code directly in the editor
+ Customizable editor themes and font sizes
+ Input/output console
 
-2. Personalised Experience (With Login / Register)
-Users who sign in get a full personalised dashboard powered by Firebase:
-• Create and save coding problems with custom titles and descriptions
-• Track solved and unsolved problems
-• Store and manage multiple code files per language
-• Auto-save and cloud sync across devices
-• Progress tracking and analytics
-• Personalized Monaco editor settings (theme, keybindings, font size, layout)
 
-Additional Highlights:
-• Built for beginners learning DSA and developers who just want a distraction-free editor
-• No setup required, runs fully in the browser
-• Firebase Authentication for secure login
-• Firestore database for storing user problems, code, preferences, and progress
-• Monaco Editor API integration with deep customization like themes, minimap, autocomplete, and IntelliSense
-
-Vision:
 The platform aims to become a smart personal coding notebook, allowing developers to practise, store, and track their coding journey while enjoying the power of Monaco Editor — all without needing a heavy IDE.
 `,
     banner: "proj1.png",
